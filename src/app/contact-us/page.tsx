@@ -1,80 +1,62 @@
-'use client';
 import React from 'react';
-import Image from 'next/image';
+import Button from '../components/share/Button';
 
-const ContactUs: React.FC = () => {
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    // Handle form submission
-    console.log('Form submitted');
-  };
-
+const Contact: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white">
-      <h1 className="text-4xl font-bold mb-8">Let's Get in Touch</h1>
-      <div className="flex flex-row bg-gray-900 shadow-lg rounded-lg overflow-hidden w-11/12 md:w-3/4 lg:w-2/3">
-        {/* Left side - Contact Form */}
-        <div className="p-8 w-full md:w-1/2">
-          <form onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label className="block text-gray-200 text-sm font-bold mb-2" htmlFor="name">
-                Name
-              </label>
+    <div className="relative h-screen overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: 'url(../Images/Contact-US.jpg)', backgroundAttachment: 'fixed' }}
+      ></div>
+      <div className="relative z-10 flex items-center justify-center h-full bg-black bg-opacity-50">
+        <div className="w-full max-w-5xl p-8 bg-white bg-opacity-0 rounded-lg">
+          <h2 className="text-center text-2xl font-semibold mb-4">
+            Hey! Interested in staying in the loop, sign-up for our updates.
+            <br />
+            We won't spam you, <span className="italic">pinky promise</span> 👍
+          </h2>
+          <form className="space-y-4">
+            <div>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name"
                 type="text"
-                placeholder="Your Name"
-                required
+                placeholder="Name"
+                className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 text-gray-900"
               />
             </div>
-            <div className="mb-7">
-              <label className="block text-gray-200 text-sm font-bold mb-2" htmlFor="email">
-                Email
-              </label>
+            <div>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email"
-                type="email"
-                placeholder="Your Email"
-                required
+                type="text"
+                placeholder="Phone"
+                className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 text-gray-900 "
               />
             </div>
-            <div className="mb-6">
-              <label className="block text-gray-200 text-sm font-bold mb-2" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="message"
-                rows={4}
-                placeholder="Your Message"
-                required
-              ></textarea>
+            <div>
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500 text-gray-900"
+              />
             </div>
-            <div className="flex items-center justify-between">
-              <button
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                type="submit"
-              >
-                Send
-              </button>
+            <div className="flex items-center">
+              <input
+                type="checkbox"
+                className="mr-2"
+              />
+              <span className="text-sm text-white">
+                I'd like to receive drop notifications and offers from Work Louder Inc. via email and/or occasional SMS & consent to the privacy policy
+              </span>
             </div>
+            
+
+            <div className="flex justify-center ">
+            <Button label="Read more"  />
+          </div>
+
           </form>
-        </div>
-        {/* Right side - Image */}
-        <div className="hidden md:block md:w-1/2">
-          <Image
-            className="object-cover w-full h-full"
-            src="/Images/ContactUs.jpg"
-            alt="Contact Us"
-            width={500}
-            height={500}
-          />
         </div>
       </div>
     </div>
   );
 };
 
-export default ContactUs;
+export default Contact;
