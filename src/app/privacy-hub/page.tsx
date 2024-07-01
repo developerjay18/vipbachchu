@@ -75,7 +75,7 @@ const PrivacyHub: React.FC = () => {
         {updates.map(update => (
           <li key={update.id} className="mb-2 p-2 max-w-full max-h-full text-lg font-semibold cursor-pointer flex items-center justify-start transition duration-300 ease-in-out group" onClick={() => handleClick(update.id)}>
             {update.title}
-            <span className="ml-2 text-white transform transition-transform duration-300 ease-in-out group-hover:-rotate-45">→</span>
+            <span className="ml-2 text-white transform transition-transform duration-300 ease-in-out group-hover:rotate-45">→</span>
           </li>
           
         ))}

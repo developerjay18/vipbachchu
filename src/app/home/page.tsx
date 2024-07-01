@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
+import ProductCard from '../components/layout/Prodctcard'
 
 type Props = {}
 
@@ -9,7 +10,7 @@ const page = (props: Props) => {
     <div>page
         <Header />
         <br />
-        
+        <ProductCard />
       <br />
       <Footer />
     </div>

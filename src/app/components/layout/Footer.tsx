@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CgTwitter, CgFacebook, CgInstagram } from 'react-icons/cg';
-
+import Image from 'next/image';
 const Footer: React.FC = () => {
   const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
 
@@ -13,6 +13,18 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer border-t border-gray-700 text-white bg-gray-900 py-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <Link
+        href={"/home"}
+        className="md:text-5xl text-white font-semibold"
+      >
+        <Image
+        src="/images/Logos/VIPBACHCHU.svg"
+        alt="logo" 
+        width={150}
+        height={150}
+         />
+      
+      </Link>
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
             <Link href="/contact-us" className="text-gray-400 hover:text-white">Contact</Link>
