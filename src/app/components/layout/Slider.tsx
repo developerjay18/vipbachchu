@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 interface Slide {
