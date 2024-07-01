@@ -16,10 +16,10 @@ const navLinks = [
     title: "Product",
     path: "/product",
   },
-  {
-    title: "Stores",
-    path: "/stores",
-  },
+  // {
+  //   title: "Stores",
+  //   path: "/stores",
+  // },
   {
     title: "Blog",
     path: "/blog",

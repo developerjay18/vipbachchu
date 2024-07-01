@@ -10,8 +10,9 @@ const page = (props: Props) => {
     <div>page
         <Header />
         <br />
-        <ProductCard />
+        {/* <ProductCard /> */}
       <br />
+      <br /><br /><br />
       <Footer />
     </div>
   )
