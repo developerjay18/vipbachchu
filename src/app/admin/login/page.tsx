@@ -41,7 +41,7 @@ const AdminLogin = () => {
       className="min-h-screen bg-cover bg-center "
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="flex flex-col justify-center items-center min-h-screen bg-gray-900 bg-opacity-75">
+      <div className="flex flex-col  font-array justify-center items-center min-h-screen bg-gray-900 bg-opacity-75">
         <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 animate-gradual-spacing">
           Welcome to the Command Center
         </h1>
