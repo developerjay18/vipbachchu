@@ -3,6 +3,7 @@ import { ReactNode, useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import Sidebar from '../ui/sidebar';
 
+
 const AnimatedNumbers = dynamic(() => import('react-animated-numbers'), {
   ssr: false,
 });
@@ -15,6 +16,7 @@ const AdminLayout = ({ children }: AdminLayoutProps) => {
   return (
     <div className="flex">
       <Sidebar />
+      
       <div className="ml-64 w-full p-6">{children}</div>
     </div>
   );
