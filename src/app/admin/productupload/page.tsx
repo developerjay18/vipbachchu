@@ -107,7 +107,7 @@ const ProductUploadPage = () => {
               <select 
                 name="categoryId" 
                 value={formData.categoryId} 
-                onChange={handleChange} c
+                onChange={handleChange} 
                 className="p-2 bg-black text-white border border-gray-300 rounded"
               >
                 <option value="id">ID Name </option>
@@ -136,7 +136,7 @@ const ProductUploadPage = () => {
                placeholder="salePrice" 
                value={formData.salePrice} 
                onChange={handleChange} 
-               placeholder="Sale Price" 
+               placeholder ="Sale Price" 
                className="p-2 bg-black text-white border border-gray-300 rounded" 
                />
               <input 

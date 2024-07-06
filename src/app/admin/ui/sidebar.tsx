@@ -79,7 +79,7 @@ const Sidebar = () => {
          >
         </hr>
         
-        <Link href="/admin/add-blogs"
+        <Link href="/admin/blogupload"
         className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
         >
           Add Blogs
@@ -101,16 +101,16 @@ const Sidebar = () => {
          >
         </hr>
         
-        <Link href="/admin/user-info"
+        {/* <Link href="/admin/user-info"
         className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700"
         >
           User Info
-        </Link>
+        </Link> */}
         
-        <hr
+        {/* <hr
           className="w-full h-0.5 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"
          >
-        </hr>
+        </hr> */}
         
       </nav>
     </div>
