@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const backgroundImages = [
   'https://images.unsplash.com/photo-1587960893026-b721b7d5ee1f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -47,7 +48,7 @@ const AdminLogin = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 w-full max-w-4xl">
           <div className="hidden md:block">
-            <img src="/Images/Art/shubham-dhage-qX8oY5mRdMI-unsplash.jpg" alt="Left Side" className="rounded-lg shadow-lg" />
+            <Image src="/Images/Art/shubham-dhage-qX8oY5mRdMI-unsplash.jpg" alt="Left Side" className="rounded-lg shadow-lg" />
           </div>
           <div className="bg-white  p-8 rounded-lg shadow-lg">
             <h2 className="text-5xl font-array text-black  mb-4">Admin Login</h2>
