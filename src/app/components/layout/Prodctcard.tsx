@@ -1,5 +1,6 @@
 // components/Product/ProductCard.tsx
 import React from 'react';
+import Image from 'next/image';
 
 interface Product {
   image: string;
@@ -19,7 +20,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onExplore }) => {
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4">
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
-      <img
+      <Image
         src={product.image}
         alt={product.title}
         className="w-full h-48 object-cover"
