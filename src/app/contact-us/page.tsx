@@ -2,9 +2,9 @@
 // imports
 import React from 'react';
 import Button from '../components/share/Button';
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
-import Slider from '../components/layout/Slider';
+// import Header from '../components/layout/Header';
+// import Footer from '../components/layout/Footer';
+// import Slider from '../components/layout/Slider';
 
 // interfaces
 interface Slide {
@@ -43,11 +43,7 @@ const Contact: React.FC = () => {
   return (
     // main container
     <main>
-      {/* header */}
-      <Header />
-        <br />
-        {/* sliders */}
-        <Slider slides={slidesData} />
+      
           <div className="relative h-screen overflow-hidden">
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -104,8 +100,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-        {/* Footer */}
-        <Footer />
+        
     </main>
   );
 };

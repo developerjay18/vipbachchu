@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Slider from '../components/layout/Slider';
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
+import Contact from '../contact-us/page';
 
 // interfaces
 interface Slide {
@@ -117,7 +118,16 @@ const AboutUs: React.FC = () => {
                     ))}
                   </div>
             </div>
-
+          {/* contact */}
+          <br />
+          <div className="relative overflow-hidden">
+            <center>
+            <h1 className='justify-center  text-6xl font-array' >Contact Us</h1>
+            </center>
+            
+          </div>
+          <br />
+            <Contact />
            {/* footer */}
              <Footer />
     </main>
