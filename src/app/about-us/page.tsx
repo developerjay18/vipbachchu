@@ -3,7 +3,9 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Slider from '../components/layout/Slider';
 import Footer from '../components/layout/Footer';
+import Header from '../components/layout/Header';
 
+// interfaces
 interface Slide {
   id: number;
   image: string;
@@ -11,11 +13,13 @@ interface Slide {
   description: string;
 }
 
+// interfaces
 interface Paragraph {
   id: number;
   story: string;
 }
 
+// sliders data
 const slidesData: Slide[] = [
   {
     id: 1,
@@ -31,6 +35,7 @@ const slidesData: Slide[] = [
   },
 ];
 
+// paragraphs data
 const storyParagraphs: Paragraph[] = [
   {
     id: 1,
@@ -54,58 +59,67 @@ const storyParagraphs: Paragraph[] = [
   },
 ];
 
+// AboutUs page
 const AboutUs: React.FC = () => {
   useEffect(() => {
     console.log('Slides Data:', slidesData);
   }, []);
 
   return (
-    <main className="container mx-auto p-4">
-      <Slider slides={slidesData} />
+    // main container 
+    <main > 
+      {/* header */}
+        <Header />
 
-      <div className="flex flex-col md:flex-row items-center md:items-start my-12">
-        <div className="md:w-1/2 p-10">
-          <h2 className="text-2xl font-semibold">VIPBACHCHU</h2>
-          <p className="mt-4">
-            At vipbachchu.com, we're passionate about helping you navigate the digital marketplace efficiently and intelligently. Whether you're hunting for the latest gadgets, fashion trends, or seeking to stay ahead in the dynamic world of stock trading, we've got you covered.
-          </p>
-        </div>
-        <div className="md:w-80 p-4 relative group">
-          <Image
-            src="/Images/Raguveer.jpg"
-            alt="Founder"
-            width={300}
-            height={300}
-            className="rounded-lg shadow-lg hover:opacity-70 transition-opacity duration-300"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 bg-opacity-75 rounded-lg">
-            <a href="https://instagram.com" className="text-white m-2">
-              <i className="fab fa-instagram"></i> Follow on Instagram
-            </a>
-            <a href="https://twitter.com" className="text-white m-2">
-              <i className="fab fa-twitter"></i> Follow on X
-            </a>
-            <a href="https://facebook.com" className="text-white m-2">
-              <i className="fab fa-facebook"></i> Follow on Facebook
-            </a>
-          </div>
-        </div>
-      </div>
+        {/* slider */}
+          <Slider slides={slidesData} />
 
-      <div className="my-8">
-        <h2 className="text-3xl font-bold text-center">Our Story</h2>
-      </div>
+        {/* About-us */}
+            <div className="container mx-auto p-4">
+              <div className="flex flex-col md:flex-row items-center md:items-start my-12">
+                <div className="md:w-1/2 p-10">
+                  <h2 className="text-2xl font-semibold">VIPBACHCHU</h2>
+                  <p className="mt-4">
+                    At vipbachchu.com, we're passionate about helping you navigate the digital marketplace efficiently and intelligently. Whether you're hunting for the latest gadgets, fashion trends, or seeking to stay ahead in the dynamic world of stock trading, we've got you covered.
+                  </p>
+                </div>
+                <div className="md:w-80 p-4 relative group">
+                  <Image
+                    src="/Images/Raguveer.jpg"
+                    alt="Founder"
+                    width={300}
+                    height={300}
+                    className="rounded-lg shadow-lg hover:opacity-70 transition-opacity duration-300"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 bg-opacity-75 rounded-lg">
+                    <a href="https://instagram.com" className="text-white m-2">
+                      <i className="fab fa-instagram"></i> Follow on Instagram
+                    </a>
+                    <a href="https://twitter.com" className="text-white m-2">
+                      <i className="fab fa-twitter"></i> Follow on X
+                    </a>
+                    <a href="https://facebook.com" className="text-white m-2">
+                      <i className="fab fa-facebook"></i> Follow on Facebook
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      <div className="space-y-8">
-        {storyParagraphs.map(paragraph => (
-          <p key={paragraph.id} className="text-2xl leading-relaxed">
-            {paragraph.story}
-          </p>
-        ))}
-      </div>
+                <div className="my-8">
+                  <h2 className="text-3xl font-bold text-center">Our Story</h2>
+                </div>
 
-      <Footer />
-      
+                  <div className="space-y-8">
+                    {storyParagraphs.map(paragraph => (
+                      <p key={paragraph.id} className="text-2xl leading-relaxed">
+                        {paragraph.story}
+                      </p>
+                    ))}
+                  </div>
+            </div>
+
+           {/* footer */}
+             <Footer />
     </main>
   );
 };
