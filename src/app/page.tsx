@@ -1,10 +1,12 @@
+'use client';
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
 import Footer from './components/layout/Footer';
 import Header from './components/layout/Header';
-import ProductCard from "./components/layout/Prodctcard";
+import ProductCard from './components/layout/Prodctcard';
 import Slider from './components/layout/Slider';
+import { useRouter } from 'next/navigation'
 
-type Props = {}
 interface Slide {
   id: number;
   image: string;
@@ -12,9 +14,14 @@ interface Slide {
   description: string;
 }
 
-interface Paragraph {
-  id: number;
-  story: string;
+interface Product {
+  ProdctId: string;
+  image: string;
+  title: string;
+  tag: string;
+  tagColor: string;
+  price: number;
+  highlight: string;
 }
 
 const slidesData: Slide[] = [
@@ -48,17 +55,49 @@ const slidesData: Slide[] = [
     title: 'Custom Slide 5',
     description: 'Sale',
   },
-  
 ];
 
-export default function Home() {
+const Home: React.FC = () => {
+  const [ProductData, setProductData] = useState<Product[]>([]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/api/products');
+        const data = await response.json();
+
+        if (Array.isArray(data)) {
+          setProductData(data);
+        } else {
+          console.error('API response is not an array:', data);
+        }
+      } catch (error) {
+        console.error('Error fetching product data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleExplore = (productId: string) => {
+    // Navigate to product detail page
+    router.push(`/products/${productId}`);
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main>
       <Header />
-        <Slider slides={slidesData} />
-        {/* <ProductCard /> */}
-      
+      <br />
+      <Slider slides={slidesData} />
+      <div className="flex flex-wrap">
+        {ProductData.map((product) => (
+          <ProductCard key={product.ProdctId} product={product} onExplore={() => handleExplore(product.ProdctId)} />
+        ))}
+      </div>
       <Footer />
     </main>
   );
 }
+
+export default Home;

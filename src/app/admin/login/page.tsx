@@ -48,7 +48,9 @@ const AdminLogin = () => {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10 w-full max-w-4xl">
           <div className="hidden md:block">
-            <Image src="/Images/Art/shubham-dhage-qX8oY5mRdMI-unsplash.jpg" alt="Left Side" className="rounded-lg shadow-lg" />
+            <Image src="/Images/Art/shubham-dhage-qX8oY5mRdMI-unsplash.jpg" alt="Left Side" 
+            width={500} height={500}
+            className="rounded-lg shadow-lg" />
           </div>
           <div className="bg-white  p-8 rounded-lg shadow-lg">
             <h2 className="text-5xl font-array text-black  mb-4">Admin Login</h2>

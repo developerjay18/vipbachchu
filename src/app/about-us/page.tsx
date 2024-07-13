@@ -71,7 +71,7 @@ const AboutUs: React.FC = () => {
     <main > 
       {/* header */}
         <Header />
-
+        <br />
         {/* slider */}
           <Slider slides={slidesData} />
 

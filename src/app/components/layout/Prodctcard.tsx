@@ -1,6 +1,7 @@
 // components/Product/ProductCard.tsx
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Product {
   ProdctId: string;
@@ -17,15 +18,22 @@ interface ProductCardProps {
   onExplore: () => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, onExplore }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const handleExplore = () => {
+    // Navigate to product details page
+    window.location.href = `/products/${product.ProdctId}`; // Directly navigate using href
+    // Or use Next.js router.push for client-side navigation
+    // router.push(`/products/${product.ProdctId}`);
+  };
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4">
+    <Link href={`/products/${product.ProdctId}`}>
       <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
         <Image
           src={product.image}
           alt={product.title}
-          width={500} // You might need to adjust these dimensions
-          height={300} // You might need to adjust these dimensions
+          width={500} 
+          height={300}
           className="w-full h-48 object-cover"
         />
         <div className="p-6">
@@ -38,15 +46,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onExplore }) => {
           <p className="text-gray-600 mb-4">${product.price}</p>
           <p className="text-gray-800 mb-4">{product.highlight}</p>
           <button
-            onClick={onExplore}
-            className="text-sm font-semibold text-indigo-500 hover:text-indigo-600 flex items-center space-x-1 transition duration-300 ease-in-out"
+            onClick={handleExplore}
+            className="text-sm font-semibold text-indigo-500 hover:text-indigo-600 flex items-center space-x-1 transition duration-300 ease-in-out group"
           >
             <span>Explore</span>
-            <span className="transform rotate-45">→</span>
+            <span className="  transform transition-transform duration-300 group-hover:-rotate-45 ease-in-out text-black ">→</span>
           </button>
         </div>
       </div>
+      </Link>
     </div>
+    
+   
   );
 };
 
