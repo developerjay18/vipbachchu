@@ -46,6 +46,10 @@ const productSchema = new Schema(
       type: String,
       required: true,
     },
+    productId: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );
