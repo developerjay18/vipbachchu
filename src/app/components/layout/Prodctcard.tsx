@@ -3,22 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface Product {
-  ProdctId: string;
-  image: string;
-  title: string;
-  tag: string;
-  tagColor: string;
-  price: number;
-  highlight: string;
-}
-
-interface ProductCardProps {
-  product: Product;
-  onExplore: () => void;
-}
-
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard = ({ product }:any) => {
   const handleExplore = () => {
     // Navigate to product details page
     window.location.href = `/products/${product.ProdctId}`; // Directly navigate using href
