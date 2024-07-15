@@ -22,3 +22,13 @@ const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
 };
 
 export default Button;
+
+/*
+<button
+            onClick={onExplore}
+            className="text-sm font-semibold text-indigo-500 hover:text-indigo-600 flex items-center space-x-1 transition duration-300 ease-in-out group"
+          >
+            <span>Explore</span>
+            <span className="  transform transition-transform duration-300 group-hover:-rotate-45 ease-in-out text-black ">→</span>
+          </button>
+*/
