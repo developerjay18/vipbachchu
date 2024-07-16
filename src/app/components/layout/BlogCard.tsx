@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation'
 
 const colors = [
   '#006B35', // Emerald Green
@@ -35,7 +35,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ id, title, description, imageUrl })
   };
 
   return (
-    <div className="p-4">
+    <div className="shadow" >
       <div className="flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden" style={{ backgroundColor: bgColor }}>
         {/* Left side - Image */}
         <div className="relative w-full md:w-1/2 h-64 md:h-auto">
