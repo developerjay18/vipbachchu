@@ -1,5 +1,6 @@
 'use client';   
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 // Define types for the flags and updates
 interface Flag {
@@ -64,7 +65,7 @@ const PrivacyHub: React.FC = () => {
       <h1 className="text-5xl font-bold mb-8">Privacy Hub</h1>
       <div className="flex space-x-4 mb-8">
         {flags.map(flag => (
-          <img key={flag.country} src={flag.src} alt={flag.country} className="w-10 h-6" />
+          <Image key={flag.country} src={flag.src} alt={flag.country} className="w-10 h-6" />
         ))}
       </div>
       <p className="text-lm mb-4">Last updated: 2024-06-29</p>

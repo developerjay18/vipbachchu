@@ -81,7 +81,7 @@ const AboutUs: React.FC = () => {
                 <div className="md:w-1/2 p-10">
                   <h2 className="text-2xl font-semibold">VIPBACHCHU</h2>
                   <p className="mt-4">
-                    At vipbachchu.com, we're passionate about helping you navigate the digital marketplace efficiently and intelligently. Whether you're hunting for the latest gadgets, fashion trends, or seeking to stay ahead in the dynamic world of stock trading, we've got you covered.
+                    At vipbachchu.com, we&apos;re passionate about helping you navigate the digital marketplace efficiently and intelligently. Whethe&apos;r you&apos;re hunting for the latest gadgets, fashion trends, or seeking to stay ahead in the dynamic world of stock&apos;trading, we&apos;ve got you covered.
                   </p>
                 </div>
                 <div className="md:w-80 p-4 relative group">

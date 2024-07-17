@@ -28,7 +28,7 @@ const ProductUploadPage = () => {
   const itemsPerPage = 5;
   const [showForm, setShowForm] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -107,7 +107,7 @@ const ProductUploadPage = () => {
               <select 
                 name="categoryId" 
                 value={formData.categoryId} 
-                onChange={handleChange} 
+                onChange={handleChange}
                 className="p-2 bg-black text-white border border-gray-300 rounded"
               >
                 <option value="id">ID Name </option>
@@ -133,7 +133,6 @@ const ProductUploadPage = () => {
               <input 
                 type="text"
                name="salePrice" 
-               placeholder="salePrice" 
                value={formData.salePrice} 
                onChange={handleChange} 
                placeholder ="Sale Price" 

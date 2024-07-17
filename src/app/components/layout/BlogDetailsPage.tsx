@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 interface BlogPostProps {
   title: string;
@@ -28,7 +29,7 @@ const BlogDetailsPage: React.FC<BlogPostProps> = ({
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{title}</h1>
       <div className="flex items-center mb-4">
-        <img
+      <Image 
           src={imageUrl}
           alt={title}
           className="w-16 h-16 rounded-full mr-4"

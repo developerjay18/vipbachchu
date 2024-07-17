@@ -27,12 +27,12 @@ const AdminSettingsPage: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setSettings(prevState => {
-      const newSettings = { ...prevState };
+      const newSettings: AdminSettings = { ...prevState };
       if (name.includes('profile')) {
-        const profileField = name.split('.')[1];
+        const profileField = name.split('.')[1] as keyof AdminSettings['profile'];
         newSettings.profile[profileField] = value;
       } else {
-        newSettings[name] = value;
+        newSettings[name as keyof AdminSettings] = value as any;
       }
       return newSettings;
     });

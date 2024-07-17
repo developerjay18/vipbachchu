@@ -14,6 +14,10 @@ const navLinks = [
     path: "/product",
   },
   {
+    title: "Credit Cards",
+    path: "/creditcards",
+  },
+  {
     title: "Blog",
     path: "/blog",
   },
@@ -21,14 +25,8 @@ const navLinks = [
     title: "About Us",
     path: "/about-us",
   },
-    // {
-    //   title: "Credit Cards",
-    //   path: "/creditcards",
-    // },
-    // {
-    //   title: "Credit Cards",
-    //   path: "/creditcards",
-    // },
+   
+  
     // {
     //   title: "Stores",
     //   path: "/stores",
@@ -57,6 +55,8 @@ const Header = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+  
+  
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-50 bg-[#121212] bg-opacity-100">
