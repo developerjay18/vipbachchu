@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
         className="md:text-5xl text-white font-semibold"
       >
         <Image
-        src="/images/Logos/VIPBACHCHU.svg"
+        src="/images/Logos/VIPBACHCHU.png"
         alt="logo" 
         width={150}
         height={150}

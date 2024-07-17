@@ -66,7 +66,7 @@ const Header = () => {
         className="text-2xl md:text-5xl text-white font-semibold"
       >
         <Image
-        src="/images/Logos/VIPBACHCHU.svg"
+        src="/images/Logos/VIPBACHCHU.png"
         alt="logo" 
         width={200}
         height={200}
