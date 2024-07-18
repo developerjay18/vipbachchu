@@ -122,7 +122,7 @@ const AboutUs: React.FC = () => {
           <br />
           <div className="relative overflow-hidden">
             <center>
-            <h1 className='justify-center  text-6xl font-array' >Contact Us</h1>
+            <h1 className='md:text-6xl text-8xl font-array bg-gradient-to-r  from-fuchsia-500 to-pink-500 bg-clip-text text-transparent font-light ' >Contact Us</h1>
             </center>
             
           </div>

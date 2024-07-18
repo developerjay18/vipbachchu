@@ -15,7 +15,7 @@ interface CreditCardProps {
 const CreditCardComponent: React.FC<CreditCardProps> = ({ card, onReadMore }) => {
   return (
     <div
-      className="relative h-[260px] w-[400px] flex flex-col justify-end px-6 py-10 text-white rounded-3xl gap-8"
+      className="relative h-[260px] w-[400px]  flex flex-col justify-end px-6 py-10 text-white rounded-3xl gap-8"
       style={{ backgroundImage: `url(${card.backgroundImage})`, backgroundSize: 'cover' }}
     >
       <p className="text-2xl font-medium">{card.name}</p>
