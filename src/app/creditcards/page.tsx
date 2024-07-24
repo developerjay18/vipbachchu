@@ -56,7 +56,7 @@ const Home: React.FC = () => {
   return (
     <main>
       <Header />
-       <br />
+       <br /> <br />
     <Slider slides={slidesData} />
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Credit Card</h1>

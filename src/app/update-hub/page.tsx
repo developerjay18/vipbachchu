@@ -15,8 +15,18 @@ interface Update {
 const updates: Update[] = [
   {
     id: 1,
+    name: 'Beta - 11.0.A',
+    version: 'Beta',
+    dateTime: 'Wednesday, 24 July 24 20:16 PM',
+    title: 'fixing bugs, enhancing stability, and improving performance.',
+    what: 'fixing bugs, enhancing stability, and improving performance.',
+    why: '',
+    performance: 'Bug occurrence reduced by 90%.',
+  },
+  {
+    id: 2,
     name: 'Beta - 10.0.A',
-    version: '',
+    version: 'Beta',
     dateTime: 'Thursday, 20 June 24 02:30 PM',
     title: 'UI Design Fully Improved and New Pages Added',
     what: 'The entire user interface has been redesigned to enhance the user experience. New pages have been added to the website, including a revamped Blog system and a Hot Deals section with personalized recommendations.',
@@ -24,7 +34,7 @@ const updates: Update[] = [
     performance: 'This version offers a 90% faster response time compared to the previous version, Stable - 09.8.A.',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Previous Version',
     version: 'Stable - 09.8.A',
     dateTime: 'Monday, 4 March 24 02:30 PM',

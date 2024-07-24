@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="footer border-t border-gray-700 text-white bg-gray-900 py-6">
+    <footer className="footer border-t border-gray-700 text-white bg-[#121212] bg-opacity-100 py-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <Link
         href={"/home"}
