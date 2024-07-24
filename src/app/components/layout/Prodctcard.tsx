@@ -11,7 +11,7 @@ const ProductCard = ({ product }: any) => {
 
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4">
-      <Link href={`/products/${product.affiliateUrl}`}>
+      
         <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-500 hover:scale-105">
           <div className="relative w-full h-48">
             <Image
@@ -40,7 +40,7 @@ const ProductCard = ({ product }: any) => {
             </button>
           </div>
         </div>
-      </Link>
+   
     </div>
   );
 };
