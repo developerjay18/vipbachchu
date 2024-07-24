@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CgTwitter, CgFacebook, CgInstagram } from 'react-icons/cg';
-import Image from 'next/image';
 const Footer: React.FC = () => {
   const [currentYear, setCurrentYear] = useState<number>(new Date().getFullYear());
 
@@ -11,19 +10,15 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="footer border-t border-gray-700 text-white bg-gray-900 py-6">
+    <footer className="footer border-t border-gray-700 text-white bg-[#121212] bg-opacity-100 py-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <Link
         href={"/home"}
-        className="md:text-5xl text-white font-semibold"
+        className="text-5xl font-array bg-gradient-to-r  from-fuchsia-500 to-pink-500 bg-clip-text text-transparent"
       >
-        <Image
-        src="/images/Logos/VIPBACHCHU.svg"
-        alt="logo" 
-        width={150}
-        height={150}
-         />
-      
+
+        VIPBACHCHU
+
       </Link>
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">

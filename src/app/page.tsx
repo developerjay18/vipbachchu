@@ -88,7 +88,7 @@ const Home: React.FC = () => {
   return (
     <main>
       <Header />
-      <br />
+      <br /><br />
       <Slider slides={slidesData} />
       <div className="flex flex-wrap">
         {ProductData.map((product) => (

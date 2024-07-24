@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import Link from 'next/link';

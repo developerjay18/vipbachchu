@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
                 <h2 className="text-center text-2xl font-semibold mb-4">
                   Hey! Interested in staying in the loop, sign-up for our updates.
                   <br />
-                  We won't spam you, <span className="italic">pinky promise</span> 👍
+                  We won&apos;t spam you, <span className="italic">pinky promise</span> 👍
                 </h2>
                 <form className="space-y-4">
                   <div>
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
                       className="mr-2"
                     />
                     <span className="text-sm text-white">
-                      I'd like to receive drop notifications and offers from Work Louder Inc. via email and/or occasional SMS & consent to the privacy policy
+                      I&apos;d like to receive drop notifications and offers from Work Louder Inc. via email and/or occasional SMS & consent to the privacy policy
                     </span>
                   </div>
                   

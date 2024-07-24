@@ -71,7 +71,7 @@ const AboutUs: React.FC = () => {
     <main > 
       {/* header */}
         <Header />
-        <br />
+        <br /> <br />
         {/* slider */}
           <Slider slides={slidesData} />
 
@@ -81,7 +81,7 @@ const AboutUs: React.FC = () => {
                 <div className="md:w-1/2 p-10">
                   <h2 className="text-2xl font-semibold">VIPBACHCHU</h2>
                   <p className="mt-4">
-                    At vipbachchu.com, we're passionate about helping you navigate the digital marketplace efficiently and intelligently. Whether you're hunting for the latest gadgets, fashion trends, or seeking to stay ahead in the dynamic world of stock trading, we've got you covered.
+                    At vipbachchu.com, we&apos;re passionate about helping you navigate the digital marketplace efficiently and intelligently. Whethe&apos;r you&apos;re hunting for the latest gadgets, fashion trends, or seeking to stay ahead in the dynamic world of stock&apos;trading, we&apos;ve got you covered.
                   </p>
                 </div>
                 <div className="md:w-80 p-4 relative group">
@@ -122,7 +122,7 @@ const AboutUs: React.FC = () => {
           <br />
           <div className="relative overflow-hidden">
             <center>
-            <h1 className='justify-center  text-6xl font-array' >Contact Us</h1>
+            <h1 className='md:text-6xl text-8xl font-array bg-gradient-to-r  from-fuchsia-500 to-pink-500 bg-clip-text text-transparent font-light ' >Contact Us</h1>
             </center>
             
           </div>

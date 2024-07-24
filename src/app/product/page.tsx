@@ -80,7 +80,7 @@ const ProductsPage: React.FC = () => {
   return (
     <main>
       <Header />
-      <br />
+      <br /> <br />
       <Slider slides={slidesData} />
       <div className="">
         {ProductData ? (
