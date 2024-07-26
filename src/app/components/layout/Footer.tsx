@@ -24,9 +24,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
             <Link href="/contact-us" className="text-gray-400 hover:text-white">Contact</Link>
             {/* <Link href="/subscribe" className="text-gray-400 hover:text-white">Subscribe</Link> */}
-            <Link href="/privacy-hub" className="text-gray-400 hover:text-white">Privacy Hub</Link>
+            <Link target='_blank' href="/privacy-hub" className="text-gray-400 hover:text-white">Privacy Hub</Link>
             {/* <Link href="/cookie-settings" className="text-gray-400 hover:text-white">Cookie Policy</Link> */}
-            <Link href="/update-hub" className="text-gray-400 hover:text-white">Update Hub</Link>
+            <Link target='_blank' href="/update-hub" className="text-gray-400 hover:text-white">Update Hub</Link>
           </div>
 
           <div className="flex space-x-4">

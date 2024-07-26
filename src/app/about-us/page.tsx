@@ -1,18 +1,12 @@
 "use client";
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import Slider from '../components/layout/Slider';
 import Footer from '../components/layout/Footer';
 import Header from '../components/layout/Header';
 import Contact from '../contact-us/page';
+import Headerimage from '../components/share/Headerimage';
 
-// interfaces
-interface Slide {
-  id: number;
-  image: string;
-  title: string;
-  description: string;
-}
+
 
 // interfaces
 interface Paragraph {
@@ -20,21 +14,7 @@ interface Paragraph {
   story: string;
 }
 
-// sliders data
-const slidesData: Slide[] = [
-  {
-    id: 1,
-    image: 'https://images.unsplash.com/photo-1718556256225-82afc1b30580?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Custom Slide 1',
-    description: 'Custom Description 1',
-  },
-  {
-    id: 2,
-    image: 'https://images.unsplash.com/photo-1708660575990-101db3b00294?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    title: 'Custom Slide 2',
-    description: 'Custom Description 2',
-  },
-];
+
 
 // paragraphs data
 const storyParagraphs: Paragraph[] = [
@@ -63,7 +43,7 @@ const storyParagraphs: Paragraph[] = [
 // AboutUs page
 const AboutUs: React.FC = () => {
   useEffect(() => {
-    console.log('Slides Data:', slidesData);
+    document.title = 'About Us | VIPBACHCHU';
   }, []);
 
   return (
@@ -71,9 +51,11 @@ const AboutUs: React.FC = () => {
     <main > 
       {/* header */}
         <Header />
-        <br /> <br />
-        {/* slider */}
-          <Slider slides={slidesData} />
+        <br /> <br /><br /> <br /> 
+        
+          <Headerimage 
+          backgroundImageUrl="https://images.unsplash.com/photo-1700508671735-d724d59ea4b5?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          text="About Us" />
 
         {/* About-us */}
             <div className="container mx-auto p-4">

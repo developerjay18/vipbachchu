@@ -3,61 +3,17 @@ import React from 'react';
 import CardSlider from '../components/layout/CardSlider';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
-import Slider from '../components/layout/Slider';
-
-
-// Slides interface
-interface Slide {
-  id: number
-  image: string
-  title: string
-  description: string
-}
-
-// Slides data
-const slidesData: Slide[] = [
-  {
-    id: 1,
-    image: '/Images/Bannes/M6vB29xwziv5tPQeYDm0W.webp',
-    title: 'Custom Slide 1',
-    description: 'Sale upto 50% off',
-  },
-  {
-    id: 2,
-    image: '/Images/Bannes/11062b_7050648587a64464888be99c32976ec6~mv2.webp',
-    title: 'Custom Slide 2',
-    description: 'Sale upto 50% off',
-  },
-  {
-    id: 3,
-    image: '/Images/Bannes/lKO6Ty-lqynYSKx2QbOyx.webp',
-    title: 'Custom Slide 3',
-    description: 'Sale upto 50% off',
-  },
-  {
-    id: 4,
-    image: '/Images/Bannes/0iPaMo6ahGuDtEgd8_t81.webp',
-    title: 'Custom Slide 4',
-    description: 'Sale now',
-  },
-  {
-    id: 5,
-    image: '/Images/Bannes/markus-spiske-BTKF6G-O8fU-unsplash.jpg',
-    title: 'Custom Slide 5',
-    description: 'Sale',
-  },
-]
-
-
-
+import Headerimage from '../components/share/Headerimage';
 
 
 const Home: React.FC = () => {
   return (
     <main>
       <Header />
-       <br /> <br />
-    <Slider slides={slidesData} />
+       <br /> <br /><br /> <br />
+    <Headerimage 
+        backgroundImageUrl="https://images.unsplash.com/photo-1675334758608-8f2af855a8b1?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        text="Credit Cards" />
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-6">Credit Card</h1>
       <CardSlider />

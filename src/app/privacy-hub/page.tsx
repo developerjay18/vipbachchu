@@ -1,6 +1,7 @@
 'use client';   
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Headerimage from '../components/share/Headerimage';
 
 // Define types for the flags and updates
 interface Flag {
@@ -19,16 +20,8 @@ interface Update {
 const flags: Flag[] = [
   { country: 'India', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/1280px-Flag_of_India.png' },
   { country: 'USA', src: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Flag_of_the_United_States.png' },
-  // { country: 'UK', src: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png' },
-  // { country: 'Canada', src: 'https://img.freepik.com/free-vector/illustration-canada-flag_53876-27114.jpg' },
-  // { country: 'Australia', src: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/2560px-Flag_of_Australia.svg.png' },
-  // { country: 'Germany', src: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Flag_of_germany_800_480.png' },
-  // { country: 'Chian', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE0KbNRhx7YGPZeysNKF07Bk0Q7KP6qfz7_w&s' },
-  // { country: 'Japan', src: 'https://upload.wikimedia.org/wikipedia/commons/3/37/Japan_Flag.png' },
-  // { country: 'South Korea', src: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_South_Korea.png' },
-  // { country: 'Thailand', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCvWnaonMnwxwvHZcjYpQMHbKOmfXM9hINXA&s' },
-  // { country: 'Russia', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuFXVaBEnKbpodO0cyYPr7WLyHPiUUxtlr-g&s' },
-  // { country: 'Brazil', src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png' },
+  { country: 'UK', src: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png' },
+ 
 ];
 
 const updates: Update[] = [
@@ -61,8 +54,12 @@ const PrivacyHub: React.FC = () => {
   };
 
   return (
-    <div className="bg-black text-white p-8 min-h-screen rounded-lg">
-      <h1 className="text-5xl font-bold mb-8">Privacy Hub</h1>
+    <div className="bg-black text-white ">
+      <br />
+      <Headerimage 
+        backgroundImageUrl="https://images.unsplash.com/photo-1638072536413-61c5c62b652e?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        text="Privacy Hub" />
+      <div className="container mx-auto p-8 min-h-screen rounded-lg">
       <div className="flex space-x-4 mb-8">
         {flags.map(flag => (
           <Image key={flag.country} src={flag.src} alt={flag.country} 
@@ -99,6 +96,7 @@ const PrivacyHub: React.FC = () => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 };

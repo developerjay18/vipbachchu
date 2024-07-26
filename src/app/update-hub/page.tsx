@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Headerimage from '../components/share/Headerimage';
 
 interface Update {
   id: number;
@@ -53,8 +54,14 @@ const UpdateHub: React.FC = () => {
   };
 
   return (
-    <div className="bg-black text-white p-8 min-h-screen rounded-lg">
-      <h1 className="text-3xl font-bold mb-8">Release Updates</h1>
+    
+    <div className="bg-black text-white">
+      <br />
+      <Headerimage 
+        backgroundImageUrl="https://images.unsplash.com/photo-1627637819794-fba32f82be16?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        text="Release Updates" />
+     <div className="container mx-auto  p-8 min-h-screen rounded-lg">
+      
       {updates.map((update) => (
         <div key={update.id} className="bg-[#282828] p-6 mb-4 rounded-lg">
           <div className="flex justify-between items-center p-3">
@@ -73,6 +80,7 @@ const UpdateHub: React.FC = () => {
         <p className="cursor-pointer hover:text-blue-300" onClick={handleClickDeveloper}>
           Developer: Akshar Patel
         </p>
+      </div>
       </div>
     </div>
   );
