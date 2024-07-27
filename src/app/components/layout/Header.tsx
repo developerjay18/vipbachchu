@@ -16,10 +16,10 @@ const navLinks = [
     title: "Credit Cards",
     path: "/creditcards",
   },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
+  // {
+  //   title: "Blog",
+  //   path: "/blog",
+  // },
   {
     title: "About Us",
     path: "/about-us",
