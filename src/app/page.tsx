@@ -117,7 +117,7 @@ const Home: React.FC = () => {
                     <h3 className="text-lg text-black font-semibold mb-2">
                       {item.name}
                     </h3>
-                    <p className="text-gray-600 mb-4">${item.regularPrice}</p>
+                    <p className="text-gray-600 mb-4">₹{item.regularPrice}</p>
                     <p className="text-gray-800 mb-4">{item.highlight}</p>
                     <button
                       onClick={(e) => handleExplore(e, item.affiliateUrl)}

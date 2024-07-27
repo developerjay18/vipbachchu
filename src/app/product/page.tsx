@@ -58,8 +58,9 @@ const ProductsPage: React.FC = () => {
     <main>
       <Header />
       <br /> <br /> <br /> <br />
-      <Headerimage backgroundImageUrl="https://images.unsplash.com/photo-1663435504751-6b84ea6db681?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnxnc2VuTmdrUDhFUXx8ZW58MHx8fHx8" 
-      text="Products" />
+      <Headerimage 
+        backgroundImageUrl="https://images.unsplash.com/photo-1663435504751-6b84ea6db681?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnxnc2VuTmdrUDhFUXx8ZW58MHx8fHx8" 
+        text="Products" />
       <div className="">
         {ProductData.length > 0 ? (
           <div className="flex justify-center flex-wrap">
@@ -90,7 +91,7 @@ const ProductsPage: React.FC = () => {
                       <h3 className="text-lg text-black font-semibold mb-2">
                         {item.name}
                       </h3>
-                      <p className="text-gray-600 mb-4">${item.regularPrice}</p>
+                      <p className="text-gray-600 mb-4">₹{item.regularPrice}</p>
                       <p className="text-gray-800 mb-4">{item.highlight}</p>
                       <button
                         onClick={(e) => handleExplore(e, item.affiliateUrl)}
