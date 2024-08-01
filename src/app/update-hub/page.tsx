@@ -50,7 +50,7 @@ const updates: Update[] = [
 const UpdateHub: React.FC = () => {
   const handleClickDeveloper = () => {
     // Handle click action for developer link
-    window.open('https://yourdeveloperprofilelink.com', '_blank');
+    window.open('https://splixtech.vercel.app/', '_blank');
   };
 
   return (
@@ -78,7 +78,7 @@ const UpdateHub: React.FC = () => {
       ))}
       <div>
         <p className="cursor-pointer hover:text-blue-300" onClick={handleClickDeveloper}>
-          Developer: Akshar Patel
+          Developer: Split Tech 
         </p>
       </div>
       </div>
