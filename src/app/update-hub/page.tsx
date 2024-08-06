@@ -78,7 +78,7 @@ const UpdateHub: React.FC = () => {
       ))}
       <div>
         <p className="cursor-pointer hover:text-blue-300" onClick={handleClickDeveloper}>
-          Developer: Split Tech 
+          Developer: SpliXTech
         </p>
       </div>
       </div>

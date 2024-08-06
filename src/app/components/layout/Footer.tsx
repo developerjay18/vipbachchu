@@ -42,7 +42,13 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="text-center md:text-right">
-            <p className="text-lg font-semibold">Developed by Split Tech </p>
+            <p className="text-lg font-semibold">
+              Developed by
+              <Link
+               href="https://splixtech.vercel.app/"
+                target="_blank"
+              className="text-gray-400 ml-1 text-lg hover:text-white">SpliXTech</Link>
+              </p>
             <p className="text-gray-500">© {currentYear} | VIPBACHCHU - All Rights Reserved</p>
           </div>
         </div>
